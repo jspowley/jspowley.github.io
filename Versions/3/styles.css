@@ -14,15 +14,13 @@ body {
 header {
     background-color: #252525; /* Darkened */
     color: white;
-    padding: 5px 0;
+    padding: 10px 0;
     text-align: center;
-    align-items: center;
 }
 
 .banner h1 {
     margin: 0;
     font-size: 2em;
-    margin: 10px 0;
 }
 
 /* Navigation styling */

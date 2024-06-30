@@ -1,10 +1,12 @@
+/* styles.css */
+
 /* General body styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* Darkened */
-    color: #1A1A1A; /* Darkened */
+    background-color: #f4f4f9;
+    color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -12,22 +14,20 @@ body {
 
 /* Header and banner */
 header {
-    background-color: #252525; /* Darkened */
+    background-color: #4CAF50;
     color: white;
-    padding: 5px 0;
+    padding: 10px 0;
     text-align: center;
-    align-items: center;
 }
 
 .banner h1 {
     margin: 0;
     font-size: 2em;
-    margin: 10px 0;
 }
 
 /* Navigation styling */
 nav {
-    background-color: #1A1A1A; /* Darkened */
+    background-color: #333;
 }
 
 nav ul {
@@ -51,7 +51,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #313131; /* Darkened */
+    background-color: #4CAF50;
 }
 
 /* Main content area */
@@ -64,7 +64,7 @@ main {
 
 /* Footer */
 footer {
-    background-color: #1A1A1A; /* Darkened */
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -81,7 +81,7 @@ footer {
 .contact-button {
     text-decoration: none;
     color: white;
-    background-color: #262626; /* Darkened */
+    background-color: #4CAF50;
     padding: 10px 15px;
     margin: 5px;
     border-radius: 5px;
@@ -95,7 +95,7 @@ footer {
 }
 
 .contact-button:hover {
-    background-color: #474646; /* Darkened */
+    background-color: #45a049;
 }
 
 /* Ensure responsiveness for footer buttons */
