@@ -1,13 +1,14 @@
 /* General body styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #ffffff;
     color: #1A1A1A;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure the body covers the full height of the viewport */
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Flex container for header, content, and footer */
@@ -18,57 +19,60 @@ body {
 
 /* Ensure the content area and footer together fill the full height */
 #content-container {
-    flex: 1; /* Allows the content area to grow and push the footer down */
+    flex: 1;
+    padding-top: 130px;
 }
 
 #home-page {
-    flex: 1; /* Allows the content area to grow and push the footer down */
+    flex: 1;
+    padding-top: 130px;
 }
 
 /* Header specific styling */
 #web-format-header {
     width: 100%;
-    position: fixed; /* Fixed positioning to keep it at the top */
-    top: 0; /* Align at the top of the viewport */
-    z-index: 1000; /* Ensure it's above other content */
+    position: fixed;
+    top: 0;
+    z-index: 1000;
     background-color: #252525;
-}
-
-#web-format-header header {
     color: white;
-    padding: 5px 0;
-    text-align: center;
-    align-items: center;
+    padding: 0;
+    margin: 0;
 }
 
 #web-format-header .banner h1 {
     margin: 0;
     font-size: 2em;
     margin: 10px 0;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
 }
 
 #web-format-header nav {
     background-color: #1A1A1A;
+    margin: 0;
+    padding: 0;
 }
 
 #web-format-header nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
 }
 
 #web-format-header nav ul li {
-    display: inline;
-    padding: 14px 16px;
+    flex: 1;
+    padding: 14px 0;
+    text-align: center;
 }
 
 #web-format-header nav ul li a {
     text-decoration: none;
     color: white;
-    padding: 14px 16px;
     display: inline-block;
+    padding: 14px 16px;
 }
 
 #web-format-header nav ul li a:hover {
@@ -78,16 +82,11 @@ body {
 /* Footer specific styling */
 #web-format-footer {
     width: 100%;
-    padding-top: 60px; /* Ensure content below header is not hidden */
-}
-
-#web-format-footer footer {
+    padding-top: 60px;
     background-color: #1A1A1A;
     color: white;
     text-align: center;
     padding: 20px 0;
-    width: 100%; /* Full width of the page */
-    margin-top: auto; /* Pushes the footer to the bottom */
 }
 
 #web-format-footer .contact-buttons {
@@ -114,21 +113,32 @@ body {
     background-color: #474646;
 }
 
-/* Ensure responsiveness for footer buttons */
+/* Responsive adjustments */
 @media (max-width: 600px) {
+    body {
+        overflow-x: hidden; /* Ensure no horizontal scrolling */
+    }
+
+    #web-format-header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #web-format-header {
+        position: static; /* Change from fixed to static positioning */
+    }
+
+    #content-container {
+        padding-top: 0; /* Remove padding top that compensates for header */
+    }
+
     #web-format-header nav ul li {
-        display: block;
-        padding: 10px 0;
+        flex: none; /* Reset flex to none for vertical layout */
+        padding: 10px 0; /* Adjust vertical padding */
     }
 
     #web-format-header .banner h1 {
         font-size: 1.5em;
-    }
-
-    #web-format-header .contact-buttons {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 
     #web-format-header .contact-button {
