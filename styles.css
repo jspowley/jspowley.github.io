@@ -10,8 +10,27 @@ body {
     min-height: 100vh; /* Ensure the body covers the full height of the viewport */
 }
 
-/* Header and banner */
-header {
+/* Flex container for header, content, and footer */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure the content area and footer together fill the full height */
+#content-container {
+    flex: 1; /* Allows the content area to grow and push the footer down */
+}
+
+#home-page {
+    flex: 1; /* Allows the content area to grow and push the footer down */
+}
+
+/* Header and Footer specific styling */
+#web-format-header-footer {
+    width: 100%;
+}
+
+#web-format-header-footer header {
     background-color: #252525;
     color: white;
     padding: 5px 0;
@@ -19,18 +38,17 @@ header {
     align-items: center;
 }
 
-.banner h1 {
+#web-format-header-footer .banner h1 {
     margin: 0;
     font-size: 2em;
     margin: 10px 0;
 }
 
-/* Navigation styling */
-nav {
+#web-format-header-footer nav {
     background-color: #1A1A1A;
 }
 
-nav ul {
+#web-format-header-footer nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -38,31 +56,23 @@ nav ul {
     text-align: center;
 }
 
-nav ul li {
+#web-format-header-footer nav ul li {
     display: inline;
     padding: 14px 16px;
 }
 
-nav ul li a {
+#web-format-header-footer nav ul li a {
     text-decoration: none;
     color: white;
     padding: 14px 16px;
     display: inline-block;
 }
 
-nav ul li a:hover {
+#web-format-header-footer nav ul li a:hover {
     background-color: #313131;
 }
 
-/* Main content area */
-main {
-    flex: 1; /* Allows the main content to grow and push the footer down */
-    padding: 20px;
-    text-align: center;
-}
-
-/* Footer */
-footer {
+#web-format-header-footer footer {
     background-color: #1A1A1A;
     color: white;
     text-align: center;
@@ -72,11 +82,11 @@ footer {
 }
 
 /* Contact buttons */
-.contact-buttons {
+#web-format-header-footer .contact-buttons {
     margin-bottom: 10px;
 }
 
-.contact-button {
+#web-format-header-footer .contact-button {
     text-decoration: none;
     color: white;
     background-color: #262626;
@@ -88,32 +98,32 @@ footer {
     transition: background-color 0.3s;
 }
 
-.contact-button i {
+#web-format-header-footer .contact-button i {
     margin-right: 5px;
 }
 
-.contact-button:hover {
+#web-format-header-footer .contact-button:hover {
     background-color: #474646;
 }
 
 /* Ensure responsiveness for footer buttons */
 @media (max-width: 600px) {
-    nav ul li {
+    #web-format-header-footer nav ul li {
         display: block;
         padding: 10px 0;
     }
 
-    .banner h1 {
+    #web-format-header-footer .banner h1 {
         font-size: 1.5em;
     }
 
-    .contact-buttons {
+    #web-format-header-footer .contact-buttons {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .contact-button {
+    #web-format-header-footer .contact-button {
         width: 80%;
         margin: 10px auto;
         text-align: center;
