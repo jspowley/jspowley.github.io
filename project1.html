@@ -3,46 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Project Portfolio</title>
+    <title>My Projects</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Link to FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="wrapper">
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="banner">
-                <h1>Welcome to my project portfolio</h1>
-            </div>
-        </header>
-        <main>
-            <section id="welcome">
-                <h2>Welcome to my project portfolio</h2>
-                <p>Explore my work and latest projects below.</p>
-                <!-- Placeholder for embedded content -->
-                <div id="embedded-content"></div>
-            </section>
-            <section id="portfolio">
-                <h2>Projects</h2>
-                <!-- Other project details -->
-            </section>
-        </main>
-        <footer>
-            <div class="contact-buttons">
-                <a href="#" class="contact-button">Email</a>
-                <a href="#" class="contact-button">LinkedIn</a>
-            </div>
-            <p>&copy; 2024 My Portfolio</p>
-        </footer>
-    </div>
-
-    <!-- JavaScript to load external HTML -->
-    <script>
+    <header>
+        <div class="banner">
+            <h1>Justin Powley</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="project1.html">Text Analytics</a></li>
+                <li><a href="project2.html">Project 2</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="content">
+            <div id="embedded-content"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="contact-buttons">
+            <a href="mailto:jpowley@ualberta.ca" class="contact-button"><i class="fas fa-envelope"></i> Email</a>
+            <a href="tel:15875904107" class="contact-button"><i class="fas fa-phone"></i> +1 587-590-4107</a>
+            <a href="https://github.com/your-github" target="_blank" class="contact-button"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" class="contact-button"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+        <p>&copy; 2024 Justin Powley</p>
+    </footer>
+<script>
         document.addEventListener("DOMContentLoaded", function() {
             fetch("review_analytics.html")
                 .then(response => response.text())
@@ -52,5 +46,6 @@
                 .catch(error => console.error("Error loading embedded content:", error));
         });
     </script>
+
 </body>
 </html>
