@@ -25,30 +25,33 @@ body {
     flex: 1; /* Allows the content area to grow and push the footer down */
 }
 
-/* Header and Footer specific styling */
-#web-format-header-footer {
+/* Header specific styling */
+#web-format-header {
     width: 100%;
+    position: fixed; /* Fixed positioning to keep it at the top */
+    top: 0; /* Align at the top of the viewport */
+    z-index: 1000; /* Ensure it's above other content */
+    background-color: #252525;
 }
 
-#web-format-header-footer header {
-    background-color: #252525;
+#web-format-header header {
     color: white;
     padding: 5px 0;
     text-align: center;
     align-items: center;
 }
 
-#web-format-header-footer .banner h1 {
+#web-format-header .banner h1 {
     margin: 0;
     font-size: 2em;
     margin: 10px 0;
 }
 
-#web-format-header-footer nav {
+#web-format-header nav {
     background-color: #1A1A1A;
 }
 
-#web-format-header-footer nav ul {
+#web-format-header nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -56,23 +59,29 @@ body {
     text-align: center;
 }
 
-#web-format-header-footer nav ul li {
+#web-format-header nav ul li {
     display: inline;
     padding: 14px 16px;
 }
 
-#web-format-header-footer nav ul li a {
+#web-format-header nav ul li a {
     text-decoration: none;
     color: white;
     padding: 14px 16px;
     display: inline-block;
 }
 
-#web-format-header-footer nav ul li a:hover {
+#web-format-header nav ul li a:hover {
     background-color: #313131;
 }
 
-#web-format-header-footer footer {
+/* Footer specific styling */
+#web-format-footer {
+    width: 100%;
+    padding-top: 60px; /* Ensure content below header is not hidden */
+}
+
+#web-format-footer footer {
     background-color: #1A1A1A;
     color: white;
     text-align: center;
@@ -81,12 +90,11 @@ body {
     margin-top: auto; /* Pushes the footer to the bottom */
 }
 
-/* Contact buttons */
-#web-format-header-footer .contact-buttons {
+#web-format-footer .contact-buttons {
     margin-bottom: 10px;
 }
 
-#web-format-header-footer .contact-button {
+#web-format-footer .contact-button {
     text-decoration: none;
     color: white;
     background-color: #262626;
@@ -98,32 +106,44 @@ body {
     transition: background-color 0.3s;
 }
 
-#web-format-header-footer .contact-button i {
+#web-format-footer .contact-button i {
     margin-right: 5px;
 }
 
-#web-format-header-footer .contact-button:hover {
+#web-format-footer .contact-button:hover {
     background-color: #474646;
 }
 
 /* Ensure responsiveness for footer buttons */
 @media (max-width: 600px) {
-    #web-format-header-footer nav ul li {
+    #web-format-header nav ul li {
         display: block;
         padding: 10px 0;
     }
 
-    #web-format-header-footer .banner h1 {
+    #web-format-header .banner h1 {
         font-size: 1.5em;
     }
 
-    #web-format-header-footer .contact-buttons {
+    #web-format-header .contact-buttons {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    #web-format-header-footer .contact-button {
+    #web-format-header .contact-button {
+        width: 80%;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    #web-format-footer .contact-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #web-format-footer .contact-button {
         width: 80%;
         margin: 10px auto;
         text-align: center;
