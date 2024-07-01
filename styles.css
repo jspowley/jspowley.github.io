@@ -119,6 +119,16 @@ body {
         overflow-x: hidden; /* Ensure no horizontal scrolling */
     }
 
+    #content-container {
+        flex: 1;
+        padding-top: 30px;
+        overflow: hidden;
+    }
+    
+    #home-page {
+        flex: 1;
+        padding-top: 30px;
+    }
     #web-format-header nav ul {
         flex-direction: column;
         align-items: center;
