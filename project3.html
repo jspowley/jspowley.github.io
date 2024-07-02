@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Projects</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles_quarto.css">
     <!-- Link to FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -30,8 +31,42 @@
     <div id="content-container">
         <main>
             <section id="content">
-                <h2>Welcome to My Project Portfolio</h2>
-                <p>Site is currently under development. Check out my text analytics project!</p>
+                <div id="contractor-page">
+                    <h1>Project Showcase: Classic Studios</h1>
+                    <p>Having met many other finance and analytics professionals, both aspiring and established, I can comfortably say I have a career path in the field which is one of a kind. Prior to the finance degree and the internships, I was a piano teacher for over half a decade. They say music and math go hand in hand. Perhaps some of the logic between the two are the same. Perhaps it’s the demands of processing lots of information at the same time. Regardless, the transition between fields went about as good as I could hope for. Using my existing relationships with music schools, I developed tools to automate and integrate some of their processes.</p>
+    
+                    <h2>Project Summary</h2>
+                    <p>The project files can be viewed <a href="https://github.com/jspowley/Recital-Automation" target="_blank">on my GitHub here</a>. They require the R executable to be installed in its default location and for all dependencies to be installed.</p>
+    
+                    <p>The goal of this project was to take an existing process, in this case scheduling concerts and recitals, and automate aspects of it to decrease the turnaround time on scheduling and reduce the chance of human error. We chose this as a starting point since it bottlenecks available human resources at certain times of the year, greatly decreasing quality in other functions of the business. There were three major considerations I had to factor in when completing this project:</p>
+                    <ol>
+                        <li>Music teachers rarely have technical skills. The ones that do eventually transition to higher impact careers.</li>
+                        <li>The tools must integrate into the existing tech stack. Investing in different tools should be justified given the business's current level of volume.</li>
+                        <li>The importance of budget outweighs the importance of features. Not every feature must make the final product, and the stability of core features should be prioritized over having many features.</li>
+                    </ol>
+                    <p>Automating the recital programming involved integrating form output from a CRM called Activity Messenger with an Excel template. Due to the non-XML format of the input data, RegEx is used heavily to isolate keyed information, which is then imported into a user-friendly template. The user can then schedule events using the template. Once complete, they can run a second script which gives them event programs, stagehand tech sheets, confirmation notices for staff, and additional program notes for the MC.</p>
+    
+                    <h2>Why Scripts are Necessary</h2>
+                    <p>See below an example of a single teacher’s recital program entry:</p>
+                    <blockquote>
+                        <p>1: First Name: Eric, Last Name: Schneider, Positive Comment / Award: Best Sight Reading, Song1 Title: Arabesque No. 1, Song1 Length (minutes): 3, Song1 Composer/Arr.: Debussy, Song1 Staging/Instruments: Piano Solo, Song2 Title: A Winter Storm, Song2 Length (minutes): 2, Song2 Composer/Arr.: Christopher Norton, Song2 Staging/Instruments: Piano Solo, 2: First Name: Eleanor, Last Name: Krips, Positive Comment / Award: Plays by Ear, Song1 Title: Chopin Etude in E Major, Song1 Length (minutes): 3, Song1 Composer/Arr.: Chopin, Song1 Staging/Instruments: Piano Solo, Song2 Title: Star Wars, Song2 Length (minutes): 1, Song2 Composer/Arr.: John Williams, Song2 Staging/Instruments: Piano Duet</p>
+                    </blockquote>
+                    <p>Note the above entry contains only 2 performers. The average teacher may submit up to 20 students and the studio averages about 10 teachers. Keeping in mind the lack of technical expertise in the organization, this could take several hours and would be prone to human error.</p>
+    
+                    <p>Using lookaheads and lookbehinds in RegEx, we can quickly identify our keyed information (using <code>Script 4.0.R</code>):</p>
+                    <img src="recital1.png" alt="RegEx Example">
+    
+                    <p>This is then pulled into the scheduling template, where times and orders can be decided immediately:</p>
+                    <img src="recital2.png" alt="Scheduling Template">
+    
+                    <p>This is then ready to be separated into template documents and all relevant materials. Note the use of Excel is typically avoided in analytics. It’s intentionally used here to remain accessible to the target audience.</p>
+    
+                    <h2>The Impact</h2>
+                    <p>This workflow reduced recital scheduling times by 75% or more. The previous process prevented changes in the original data being propagated to linked documents, requiring manually changing the same entry in 4-10 places when revisions were required. By automatically pushing changes to linked documents, this speeds up both the creation and revision stage significantly. The use of a pre-structured Excel template and explicit SOP limit the chance of human error significantly. A key takeaway is that not all code needs to be excessively long to have a significant impact. A short 100 line script in this case saves many hours and greatly improves the quality of the related services.</p>
+    
+                    <h2>Next Steps</h2>
+                    <p>Automating the second half of the process, including document creation from the schedule data. Estimated completion by July 20, 2024, in line with other business objectives and timelines.</p>
+                </div>
             </section>
         </main>
     </div>
