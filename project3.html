@@ -57,10 +57,10 @@
                     <h2>Extracting Information</h2>
     
                     <p>The information above is semi-structured. If it contains multiple rows, each row will be identified by a unique number followed by a colon. This does not mean that the user can not produce entries with a similar format, and therefor the table syntax is difficult to work with to identify keyed information consistently in all cases. I recommend anyone with familiarity in RegEx check the project files (<code>Initial_Parser.R</code>) to see how this was handled. In this case, we first idenitfy locations to insert a unique delimiter, before separating, to prevent information loss from when delimiters and patterns are removed. Using lookaheads and lookbehinds we can isolate information contained between the various tags:</p>
-                    <img src="recital1.png" alt="RegEx Example">
+                    <img src="Recital1.png" alt="RegEx Example">
     
                     <p>This is then pulled into the scheduling template, where times and orders can be decided immediately:</p>
-                    <img src="recital2.png" alt="Scheduling Template">
+                    <img src="Recital2.png" alt="Scheduling Template">
     
                     <p>This is then ready to be separated into template documents and all relevant materials. Note the use of Excel is typically avoided in analytics. It’s intentionally used here to remain accessible to the target audience.</p>
                     <h2>Scheduling and Making Changes</h2>
@@ -73,7 +73,7 @@
                     <p>This workflow reduced recital scheduling times by 75% or more. The previous process prevented changes in the original data being propagated to linked documents, requiring manually changing the same entry in 4-10 places when revisions were required. By automatically pushing changes to linked documents, this speeds up both the creation and revision stage significantly. The use of a pre-structured Excel template and explicit SOP limit the chance of human error significantly. A key takeaway is that not all code needs to be excessively long to have a significant impact. A short 100 line script in this case saves many hours and greatly improves the quality of the related services.</p>
     
                     <h2>Next Steps</h2>
-                    <p>Automatic rendering to key documents (programs, printouts, tech sheets) has been completed as of early July. The final step is to install the software on the clents machine, and to present training materials to the staff.</p>
+                    <p>Automatic rendering to key documents (programs, printouts, tech sheets) has been completed as of early July. The final step is to install the software on the clients machine, and to present training materials to the staff.</p>
                 </div>
             </section>
         </main>
