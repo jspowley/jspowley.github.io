@@ -33,6 +33,7 @@
             <section id="content">
                 <div id="contractor-page">
                     <h1>Project Showcase: Classic Studios</h1>
+                    <p><em>Classic Studios has consented to the posting and presentation of project files for the purposes of developing new professional connections and demonstrating subject matter expertise.</em></p>
                     <p>Having met many other finance and analytics professionals, both aspiring and established, I can comfortably say I have a career path in the field which is one of a kind. Prior to the finance degree and the internships, I was a piano teacher for over half a decade. They say music and math go hand in hand. Perhaps some of the logic between the two are the same. Perhaps it’s the demands of processing lots of information at the same time. Regardless, the transition between fields went about as good as I could hope for. Using my existing relationships with music schools, I developed tools to automate and integrate some of their processes.</p>
     
                     <h2>Project Summary</h2>
@@ -52,20 +53,27 @@
                         <p>1: First Name: Eric, Last Name: Schneider, Positive Comment / Award: Best Sight Reading, Song1 Title: Arabesque No. 1, Song1 Length (minutes): 3, Song1 Composer/Arr.: Debussy, Song1 Staging/Instruments: Piano Solo, Song2 Title: A Winter Storm, Song2 Length (minutes): 2, Song2 Composer/Arr.: Christopher Norton, Song2 Staging/Instruments: Piano Solo, 2: First Name: Eleanor, Last Name: Krips, Positive Comment / Award: Plays by Ear, Song1 Title: Chopin Etude in E Major, Song1 Length (minutes): 3, Song1 Composer/Arr.: Chopin, Song1 Staging/Instruments: Piano Solo, Song2 Title: Star Wars, Song2 Length (minutes): 1, Song2 Composer/Arr.: John Williams, Song2 Staging/Instruments: Piano Duet</p>
                     </blockquote>
                     <p>Note the above entry contains only 2 performers. The average teacher may submit up to 20 students and the studio averages about 10 teachers. Keeping in mind the lack of technical expertise in the organization, this could take several hours and would be prone to human error.</p>
+
+                    <h2>Extracting Information</h2>
     
-                    <p>Using lookaheads and lookbehinds in RegEx, we can quickly identify our keyed information (using <code>Script 4.0.R</code>):</p>
+                    <p>The information above is semi-structured. If it contains multiple rows, each row will be identified by a unique number followed by a colon. This does not mean that the user can not produce entries with a similar format, and therefor the table syntax is difficult to work with to identify keyed information consistently in all cases. I recommend anyone with familiarity in RegEx check the project files (<code>Initial_Parser.R</code>) to see how this was handled. In this case, we first idenitfy locations to insert a unique delimiter, before separating, to prevent information loss from when delimiters and patterns are removed. Using lookaheads and lookbehinds we can isolate information contained between the various tags:</p>
                     <img src="recital1.png" alt="RegEx Example">
     
                     <p>This is then pulled into the scheduling template, where times and orders can be decided immediately:</p>
                     <img src="recital2.png" alt="Scheduling Template">
     
                     <p>This is then ready to be separated into template documents and all relevant materials. Note the use of Excel is typically avoided in analytics. It’s intentionally used here to remain accessible to the target audience.</p>
+                    <h2>Scheduling and Making Changes</h2>
+                    <P>The client can then make changes to the schedule using Excel, which is a tool they are familiar with which doesn't require furher technical training. The tools built on top of this template allow changes to be pushed forward to documents downstream, making it a central record for all program updates and scheduling changes. This addresses of the biggest time losses in their former process. Previously, late changes required updates in up to 6 different locations, making updates both more error prone and costly. Integrating the master template with downstream documents allows greater flexibility to make adjustments at any point and provides more leniency to the volume of changes that can be made. This benefits both the administrative staff at Classic Studios, who can now handle larger volumes more effectively, as well as studio clients, who can now reliably have their adjustments be accomodated more flexibly due to the lower time constraint.</P>
+                    <h2>Improving Maintainability</h2>
+
+                    <p>To improve the longevity of the code, standlone functions for parsing multiine tables from AM were developed, allowing for easier configuration to new forms. This then becomes a resuable toolkit for the business to be able to parse multiline forms effectively when using the format again in the future. Functional programming is important since it greatly improves code flexibility in the future. Slightly longer development times up front mean reduced development times going forward, and allow updates to be made easier when systems change and begin interfacing in new ways.</p>
     
                     <h2>The Impact</h2>
                     <p>This workflow reduced recital scheduling times by 75% or more. The previous process prevented changes in the original data being propagated to linked documents, requiring manually changing the same entry in 4-10 places when revisions were required. By automatically pushing changes to linked documents, this speeds up both the creation and revision stage significantly. The use of a pre-structured Excel template and explicit SOP limit the chance of human error significantly. A key takeaway is that not all code needs to be excessively long to have a significant impact. A short 100 line script in this case saves many hours and greatly improves the quality of the related services.</p>
     
                     <h2>Next Steps</h2>
-                    <p>Automating the second half of the process, including document creation from the schedule data. Estimated completion by July 20, 2024, in line with other business objectives and timelines.</p>
+                    <p>Automatic rendering to key documents (programs, printouts, tech sheets) has been completed as of early July. The final step is to install the software on the clents machine, and to present training materials to the staff.</p>
                 </div>
             </section>
         </main>
