@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "About",
+    "section": "",
+    "text": "In 2022, I pivoted my career as a piano teacher to financial analytics. Today I develop the analytics skill-sets of teams and build the tools they need to succeed.\nMy previous projects grapple with complex data and problems, and range full full big data natural language processing models to highly detailed parameter optimization on trading strategies. I merge my prior experience as a teacher with skills in analytics to develop teams and build the tools needed grapple with big data in a complex world."
+  },
+  {
+    "objectID": "index.html#about",
+    "href": "index.html#about",
+    "title": "About",
+    "section": "",
+    "text": "In 2022, I pivoted my career as a piano teacher to financial analytics. Today I develop the analytics skill-sets of teams and build the tools they need to succeed.\nMy previous projects grapple with complex data and problems, and range full full big data natural language processing models to highly detailed parameter optimization on trading strategies. I merge my prior experience as a teacher with skills in analytics to develop teams and build the tools needed grapple with big data in a complex world."
+  },
+  {
+    "objectID": "projects_upcoming.html",
+    "href": "projects_upcoming.html",
+    "title": "Featured",
+    "section": "",
+    "text": "The high level goal is to address major pain points in EIA’s v2 API, such as finding data and configuring API calls for an integrated workflow.\nThe goal is to wrap all possible EIA API endpoints into an easy to navigate, searchable index. Such a workflow would allow for a filtered dataframe of endpoints to be immediately connverted into live links. Additional functionality would include functions for saving an endpoint image for stable continued use, and recursive metadata functions for identifying endpoint attributes, as well as merge functions for linking to bulk data downloads for lazy loading.\nA secondary level to this implementation could be an EIA data browser, through shiny as a package, to enable first layer EDA for data scientists."
+  },
+  {
+    "objectID": "projects_upcoming.html#upcoming-packages",
+    "href": "projects_upcoming.html#upcoming-packages",
+    "title": "Featured",
+    "section": "",
+    "text": "The high level goal is to address major pain points in EIA’s v2 API, such as finding data and configuring API calls for an integrated workflow.\nThe goal is to wrap all possible EIA API endpoints into an easy to navigate, searchable index. Such a workflow would allow for a filtered dataframe of endpoints to be immediately connverted into live links. Additional functionality would include functions for saving an endpoint image for stable continued use, and recursive metadata functions for identifying endpoint attributes, as well as merge functions for linking to bulk data downloads for lazy loading.\nA secondary level to this implementation could be an EIA data browser, through shiny as a package, to enable first layer EDA for data scientists."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  }
+]

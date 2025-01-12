@@ -1,5 +1,14 @@
 ---
-title: "Featured and Upcoming"
+title: "Featured"
 ---
 
-Updates
+## Upcoming Packages
+
+### EIA APIv2 Browser
+
+The high level goal is to address major pain points in EIA's v2 API, such as finding data and configuring API calls for an integrated workflow.
+
+The goal is to wrap all possible EIA API endpoints into an easy to navigate, searchable index. Such a workflow would allow for a filtered dataframe of endpoints to be immediately connverted into live links. Additional functionality would include functions for saving an endpoint image for stable continued use, and recursive metadata functions for identifying endpoint attributes, as well as merge functions for linking to bulk data downloads for lazy loading.
+
+A secondary level to this implementation could be an EIA data browser, through shiny as a package, to enable first layer EDA for data scientists.
+
