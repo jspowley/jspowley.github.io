@@ -1,0 +1,20 @@
+/* css styles */
+h1.title {
+  display: none;
+}
+
+.crop-bio {
+  width: 98%;
+  height: auto;
+  object-fit: cover;
+  object-position: top;
+  clip-path: inset(20% 0 0 0);
+  object-position: top;
+  overflow: hidden;
+  margin-top: -22%;
+  padding-right: 10%;
+}
+
+.padding-10 {
+  padding: 10%;                  /* Adds 10% padding around the element */
+}
