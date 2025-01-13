@@ -96,6 +96,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="./projects_upcoming.html" aria-current="page"> 
 <span class="menu-text">Featured</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./text_analytics.html"> 
+<span class="menu-text">Text Analytics</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
@@ -132,11 +136,62 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="upcoming-packages" class="level2">
 <h2 class="anchored" data-anchor-id="upcoming-packages">Upcoming Packages</h2>
+<p>The following are ideas which may see there implementation in the future. As time passes expect updates, projects, and repos published to my github site. Need one of these? Feel free to reach out and I can prioritize accordingly.</p>
 <section id="eia-apiv2-browser" class="level3">
 <h3 class="anchored" data-anchor-id="eia-apiv2-browser">EIA APIv2 Browser</h3>
 <p>The high level goal is to address major pain points in EIA’s v2 API, such as finding data and configuring API calls for an integrated workflow.</p>
-<p>The goal is to wrap all possible EIA API endpoints into an easy to navigate, searchable index. Such a workflow would allow for a filtered dataframe of endpoints to be immediately connverted into live links. Additional functionality would include functions for saving an endpoint image for stable continued use, and recursive metadata functions for identifying endpoint attributes, as well as merge functions for linking to bulk data downloads for lazy loading.</p>
-<p>A secondary level to this implementation could be an EIA data browser, through shiny as a package, to enable first layer EDA for data scientists.</p>
+<p>The goal is to wrap all possible EIA API endpoints into an easy to navigate, searchable index. Such a workflow would allow for a filtered dataframe of endpoints to be immediately converted into live links. Additional functionality would include functions for saving an endpoint image for stable continued use, and recursive metadata functions for identifying endpoint attributes, as well as merge functions for linking to bulk data downloads for lazy loading.</p>
+<p>Follow ups on this implementation could include: - Integrated browser and EDA tools for EIA data in a shiny app package. - Web scraper for pulling in related documentaion (data collection rationale, assumptions etc.)</p>
+</section>
+<section id="reddit-scraper" class="level3">
+<h3 class="anchored" data-anchor-id="reddit-scraper">Reddit Scraper</h3>
+<p>I view Reddit as occupying a very particular space in the social media landscape. Algorithmic social media apps such as Facebook and Youtube use a combination of self enrollment into a network of people and algorithms to further narrow recommended content from there. Reddit on the other hand is quite different:</p>
+<ul>
+<li>Content is driven by topic of interest, not by following other people.</li>
+<li>Networks of people don’t exist, at least not in the conventional sense. Everyone is anonymous in their contributions.</li>
+</ul>
+<p>If each person is as a basket of interests, then on a network driven site, you’re bound to get some material shown which is less relevant to you. On Facebook, you might follow someone for their excellent piano playing; you don’t really care about their recent engagement, family holiday, recent snatch at a thrift store or last dinner party. As an outside onlooker, it becomes hard to narrow which interests may have enticed you to follow in the first place. Are you interested in their music, their cooking, or their style? Or perhaps something else entirely. Reddit has much tighter and stricter boundaries on areas of interest. <strong>By engaging with a sub-reddit, you’re giving the big green check mark that says: Hey everyone, I’m interested</strong> in American politics, Spanish cuisine, or F1 racing. You’re actively engaging in a bounded subject space with its own unique characteristics. Finally, you’re crossing a threshold that states you like the topic enough to dedicate exclusive time to engaging with it, devoid of distractions of another subject matter. So what better of a place to go to in order to develop changes in sentiment, the linguistic spaces, and topics of interest for trending and upcoming topics.</p>
+<p>The goal will be to make a collection of tools that streamlines the process of scraping Reddit, as well as tools for driving embedding and predictive models.</p>
+</section>
+<section id="trade-algo-package" class="level3">
+<h3 class="anchored" data-anchor-id="trade-algo-package">Trade Algo Package</h3>
+<p>Development of a universal framework for trade execution, grid search, and optimization, in a compiled language, to improve the pace and granularity achievable relative to an implementation in R.</p>
+<p>More detailed breakdown of features on request. Previous successful algo implementations either:</p>
+<ul>
+<li>Ran too slow</li>
+<li>Would have benefited from finer increments between parameters</li>
+</ul>
+<p>This package aims to address these two ain points.</p>
+</section>
+<section id="lexical-indexer" class="level3">
+<h3 class="anchored" data-anchor-id="lexical-indexer">Lexical Indexer</h3>
+<p>Imagine our own Google in R. Every document containing text is ordered in a lexicon, with file origins stored as pointers within its tree strcuture. What does thi let us do? Find all files with matching vocabularies within <strong>our workflow</strong> and across <strong>multiple workflows</strong> and analyze the likelihood of self similarity. his allows for more complex searches than doing naive exact matching, by letting us cross reference between documents dynamically.</p>
+<p>The goal is to have the tree self build and refine as documents are added, edited, and removed, and then to have features that makes the most of these connections (search, vectorize, etc)</p>
+<p>To be avoided: high levels of manual maintenance beyond indicating the target directory/corpus.</p>
+</section>
+<section id="revamped-google-trends-package" class="level3">
+<h3 class="anchored" data-anchor-id="revamped-google-trends-package">Revamped Google Trends Package</h3>
+<p>Sadly, the most popular Google trends R package has been broken and spotty for a while. Its time we saw this package revamped and brought to its former glory. Google trends is great due to a lack of sampling bias. Unlike our own scrapers, we expect a level of information completeness that results from asking Google “how many users are interested in XYZ” directly. Whereas with a conventional scraper, you’re unable to effectively collect from all possible info available for the given site in most cases.</p>
+</section>
+<section id="trade-execution-dynamic-and-multicolumn-strategies" class="level3">
+<h3 class="anchored" data-anchor-id="trade-execution-dynamic-and-multicolumn-strategies">Trade Execution: Dynamic and Multicolumn Strategies</h3>
+<p>Sometimes, column manipulations for signal, position and trade, aren’t enough to create a full trade execution implementation. This is especially true if your implementation responds to prior performance in its investing decisions. One example would be any strategy which adjusts its investing strategy to the amount of capital available. This requires calculating both portfolio value and the cash component, which is a result of prior trade decisions.</p>
+<p>Calculating multiple columns in tandem has been a major sticking point in more dynamic strategies. Such a strategy requires each row to be calculated one at a time, with all columns calculated in tandem. The goal of this package will be to develop flexible classes, and modifications on the accumulate function, to carry full rows of information forward in time, and then expand these into their respective column spaces after all rows have been executed.</p>
+</section>
+<section id="algo-trading-implementation-live-markets" class="level3">
+<h3 class="anchored" data-anchor-id="algo-trading-implementation-live-markets">Algo Trading Implementation (Live Markets)</h3>
+<p>A package for the implementation of an actual algo trading bot hosted on a server. The intent would be to invest up to $1000 on a naive strategy, and flesh out all the technical requirements for trade execution in a live environment. The purpose would not be to make money, but instead to have execution on the market drive-able by the program.</p>
+<p>Security issues and connectivity to financial institutions may prove problematic for this. Integration with 3rd parties is an inevitable step of this project, driving the majority of the challenge, if possible at our scale at all.</p>
+</section>
+<section id="open-street-maps-autonomous-agents-package" class="level3">
+<h3 class="anchored" data-anchor-id="open-street-maps-autonomous-agents-package">Open Street Maps: Autonomous Agents Package</h3>
+<p>Package for simulating transit through a network by multiple autonomous consumers. Node networking between businesses and residential regions, to determine consumer reach and falloff. Additional tools for sign up programs held internally within businesses in order to map geographic reach more precisely.</p>
+<p>Potential to integrate with a consumer facing app, such as a restaurant finder applet, ordering app, google map query etc. for value on both consumer and business facing sides.</p>
+</section>
+<section id="product-spec-scraper" class="level3">
+<h3 class="anchored" data-anchor-id="product-spec-scraper">Product Spec Scraper:</h3>
+<p>Scraper for common product specs such as storage space, cost etc. Connected to an affiliate link program and a solid domain, sites like these can make affiliate commissions easily by providing a comprehensive view of the product landscape.</p>
+<p>Requires a destination website with an affiliate link program.</p>
 
 
 </section>

@@ -9,6 +9,7 @@ website:
       - href: index.qmd
         text: Home
       - projects_upcoming.qmd
+      - text_analytics.qmd
 
 format:
   html:
